@@ -245,9 +245,10 @@
         }
 
         .research-figure {
-            width: 300px;
-            height: 200px;
-            background: var(--border);
+            width: 400px;
+            height: 250px;
+            background: white;
+            border: 8px solid white;
             border-radius: 8px;
             flex-shrink: 0;
             display: flex;
@@ -255,6 +256,15 @@
             justify-content: center;
             color: var(--text-light);
             font-size: 14px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .research-figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: white;
         }
 
         @media (max-width: 768px) {
@@ -271,7 +281,7 @@
 
         /* Hiring Section */
         .hiring {
-            background: var(--bg-light);
+            background: var(--bg-white);
             color: var(--text-dark);
         }
 
@@ -313,6 +323,11 @@
             margin-bottom: 8px;
         }
 
+        .hiring-item li strong {
+            display: inline-block;
+            min-width: 140px;
+        }
+
         .hiring-item a {
             color: var(--accent);
             text-decoration: none;
@@ -327,7 +342,7 @@
 
         /* Team Section */
         .team {
-            background: var(--bg-white);
+            background: var(--bg-light);
         }
 
         .team-grid {
@@ -490,12 +505,12 @@
                         <h3>Chain-of-Thought Monitoring & Hidden Reasoning</h3>
                         <p>Our primary research focus has been on chain-of-thought monitoring. We investigate how information access affects LLM monitors' ability to detect sabotage and other safety-critical behaviors. We've also developed a taxonomy for understanding hidden reasoning processes within LLMs, providing a structured framework for analyzing covert reasoning mechanisms.</p>
                         <div style="margin-top: 12px; display: flex; gap: 24px; flex-wrap: wrap;">
-                            <a href="https://drive.google.com/file/d/1DLJfUp86NvORJiQx1NJf0a1MJcVcaL_e/view" target="_blank" rel="noopener noreferrer" class="paper-link">Forthcoming Paper: "How does information access affect LLM monitors' ability to detect sabotage?" →</a>
+                            <a href="https://drive.google.com/file/d/1DLJfUp86NvORJiQx1NJf0a1MJcVcaL_e/view" target="_blank" rel="noopener noreferrer" class="paper-link">Paper: "How does information access affect LLM monitors' ability to detect sabotage?" →</a>
                             <a href="https://www.lesswrong.com/posts/ZrgFfeWuckpwK5Lyi/hidden-reasoning-in-llms-a-taxonomy" target="_blank" rel="noopener noreferrer" class="paper-link">Read: "Hidden Reasoning in LLMs: A Taxonomy" →</a>
                         </div>
                     </div>
                     <div class="research-figure">
-                        [Figure placeholder]
+                        <img src="images/info_access.png" alt="Information Access Research">
                     </div>
                 </div>
                 
@@ -505,7 +520,7 @@
                         <p>We're exploring topics including shaping the generalization of LLM personas, interpretable continual learning, and pretraining data filtering. Our research agenda remains flexible to focus on the most impactful projects.</p>
                     </div>
                     <div class="research-figure">
-                        [Figure placeholder]
+                        <img src="images/CL_robot.png" alt="CL Robot">
                     </div>
                 </div>
             </div>
@@ -529,14 +544,14 @@
                         <li><strong>Start Date:</strong> Between February and May 2026</li>
                         <li><strong>Duration:</strong> Through end of 2026, with possibility of extension</li>
                         <li><strong>Compensation:</strong> ~$100k USD/year (prorated based on start date)</li>
-                        <li><strong>Application Deadline:</strong> Saturday, January 3rd EOD AoE</li>
+                        <li><strong>Apply by:</strong> Saturday, January 3rd EOD AoE</li>
                         <li><strong>Location:</strong> Trajectory Labs, Toronto (in-person expected, visa sponsorship available)</li>
                     </ul>
                 </div>
 
                 <div class="hiring-item">
                     <h3>What you'd be working on</h3>
-                    <p>So far, we have focused on chain-of-thought monitoring. See our <a href="#research">Research</a> section for details on our work, including our forthcoming paper <a href="https://drive.google.com/file/d/1DLJfUp86NvORJiQx1NJf0a1MJcVcaL_e/view" target="_blank" rel="noopener noreferrer">How does information access affect LLM monitors' ability to detect sabotage?</a> and our post <a href="https://www.lesswrong.com/posts/ZrgFfeWuckpwK5Lyi/hidden-reasoning-in-llms-a-taxonomy" target="_blank" rel="noopener noreferrer">Hidden Reasoning in LLMs: A Taxonomy</a>.</p>
+                    <p>So far, we have focused on chain-of-thought monitoring. See our <a href="#research">Research</a> section for details on our work, including our paper <a href="https://drive.google.com/file/d/1DLJfUp86NvORJiQx1NJf0a1MJcVcaL_e/view" target="_blank" rel="noopener noreferrer">How does information access affect LLM monitors' ability to detect sabotage?</a> and our post <a href="https://www.lesswrong.com/posts/ZrgFfeWuckpwK5Lyi/hidden-reasoning-in-llms-a-taxonomy" target="_blank" rel="noopener noreferrer">Hidden Reasoning in LLMs: A Taxonomy</a>.</p>
                     <p>We are not committed to a specific research agenda for the upcoming year yet. Topics we're currently exploring include shaping the generalization of LLM personas, interpretable continual learning, and pretraining data filtering. We plan to always work on whatever seems most impactful to us.</p>
                 </div>
 
