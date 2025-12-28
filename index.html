@@ -342,8 +342,8 @@
         }
 
         .team-member-avatar {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             background: var(--border);
             margin: 0 auto 16px;
@@ -352,6 +352,14 @@
             justify-content: center;
             color: var(--text-light);
             font-size: 12px;
+            overflow: hidden;
+        }
+
+        .team-member-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .team-member h3 {
@@ -383,8 +391,8 @@
         }
 
         .advisor-avatar {
-            width: 90px;
-            height: 90px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             background: var(--border);
             margin: 0 auto 16px;
@@ -393,6 +401,14 @@
             justify-content: center;
             color: var(--text-light);
             font-size: 11px;
+            overflow: hidden;
+        }
+
+        .advisor-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .advisor h4 {
@@ -560,17 +576,23 @@
             
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="team-member-avatar">[Photo]</div>
+                    <div class="team-member-avatar">
+                        <img src="images/rohan-subramani.jpeg" alt="Rohan Subramani" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                    </div>
                     <h3>Rohan Subramani</h3>
                     <p>Founder & Researcher</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-member-avatar">[Photo]</div>
+                    <div class="team-member-avatar">
+                        <img src="images/rauno-arike.jpeg" alt="Rauno Arike" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                    </div>
                     <h3>Rauno Arike</h3>
                     <p>Researcher</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-member-avatar">[Photo]</div>
+                    <div class="team-member-avatar">
+                        <img src="images/shubhorup-biswas.jpg" alt="Shubhorup Biswas" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                    </div>
                     <h3>Shubhorup Biswas</h3>
                     <p>Researcher</p>
                 </div>
@@ -580,22 +602,30 @@
                 <h2 class="section-title" style="font-size: 36px;">Advisors</h2>
                 <div class="advisors-grid">
                     <div class="advisor">
-                        <div class="advisor-avatar">[Photo]</div>
+                        <div class="advisor-avatar">
+                            <img src="images/seth-herd.jpg" alt="Seth Herd" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                        </div>
                         <h4>Seth Herd</h4>
                         <p>Astera Institute</p>
                     </div>
                     <div class="advisor">
-                        <div class="advisor-avatar">[Photo]</div>
+                        <div class="advisor-avatar">
+                            <img src="images/marius-hobbhahn.jpeg" alt="Marius Hobbhahn" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                        </div>
                         <h4>Marius Hobbhahn</h4>
                         <p>Apollo Research</p>
                     </div>
                     <div class="advisor">
-                        <div class="advisor-avatar">[Photo]</div>
+                        <div class="advisor-avatar">
+                            <img src="images/erik-jenner.png" alt="Erik Jenner" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                        </div>
                         <h4>Erik Jenner</h4>
                         <p>Google DeepMind</p>
                     </div>
                     <div class="advisor">
-                        <div class="advisor-avatar">[Photo]</div>
+                        <div class="advisor-avatar">
+                            <img src="images/francis-rhys-ward.webp" alt="Francis Rhys Ward" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                        </div>
                         <h4>Francis Rhys Ward</h4>
                         <p>Independent / LawZero</p>
                     </div>
