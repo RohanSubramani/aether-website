@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aether | Independent AI Safety Research</title>
+    <title>Aether</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23ffffff'/%3E%3Ctext x='50' y='70' font-family='Arial, sans-serif' font-size='70' font-weight='700' text-anchor='middle' fill='%23000000'%3EA%3C/text%3E%3C/svg%3E">
     <style>
         * {
             margin: 0;
@@ -15,6 +16,8 @@
             --primary: #000000;
             --secondary: #666666;
             --accent: #0066ff;
+            --accent-purple: #8b5cf6;
+            --accent-teal: #14b8a6;
             --bg-light: #fafafa;
             --bg-white: #ffffff;
             --text-dark: #1a1a1a;
@@ -83,25 +86,39 @@
 
         /* Hero Section */
         .hero {
-            padding: 160px 0 100px;
+            padding: 120px 0 80px;
             text-align: center;
-            background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-light) 100%);
+            background: var(--bg-white);
+        }
+
+        .hero-content {
+            max-width: 750px;
+            margin: 0 auto;
         }
 
         .hero h1 {
             font-size: 72px;
             font-weight: 700;
             letter-spacing: -2px;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             color: var(--primary);
             line-height: 1.1;
+            text-align: center;
         }
 
         .hero .tagline {
-            font-size: 24px;
+            font-size: 20px;
             color: var(--text-light);
-            margin-bottom: 40px;
+            margin-bottom: 24px;
             font-weight: 400;
+        }
+
+        .hero .mission-text {
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--text-dark);
+            max-width: 750px;
+            margin: 0 auto 32px;
         }
 
         .cta-button {
@@ -132,6 +149,7 @@
         .cta-button.secondary:hover {
             background: var(--primary);
             color: white;
+            border-color: var(--primary);
         }
 
         /* Section Styles */
@@ -145,153 +163,167 @@
             letter-spacing: -1.5px;
             margin-bottom: 16px;
             color: var(--primary);
-        }
-
-        .section-subtitle {
-            font-size: 20px;
-            color: var(--text-light);
-            margin-bottom: 60px;
-            max-width: 700px;
-        }
-
-        /* Mission Section */
-        .mission {
-            background: var(--bg-white);
-        }
-
-        .mission-content {
-            max-width: 800px;
-            margin: 0 auto;
             text-align: center;
         }
 
-        .mission-text {
-            font-size: 20px;
-            line-height: 1.8;
-            color: var(--text-dark);
-            margin-bottom: 40px;
+        .section-title-only {
+            margin-bottom: 60px;
         }
+
+        .hiring-apply-section {
+            margin-bottom: 60px;
+            text-align: center;
+            padding: 32px;
+            background: var(--bg-white);
+            border-radius: 8px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hiring-apply-section .cta-button {
+            margin-bottom: 12px;
+        }
+
+        .hiring-apply-section p {
+            color: var(--text-light);
+            font-size: 14px;
+            margin: 0;
+        }
+
 
         /* Research Section */
         .research {
             background: var(--bg-light);
         }
 
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
+        .research-list {
             margin-top: 60px;
         }
 
-        .research-card {
-            background: white;
-            padding: 32px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
+        .research-item {
+            display: flex;
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 80px;
         }
 
-        .research-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+        .research-item:last-child {
+            margin-bottom: 0;
         }
 
-        .research-card h3 {
-            font-size: 22px;
+        .research-content {
+            flex: 1;
+        }
+
+        .research-item h3 {
+            font-size: 28px;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             color: var(--primary);
         }
 
-        .research-card p {
+        .research-item p {
             color: var(--text-light);
             line-height: 1.7;
+            font-size: 17px;
+            margin-bottom: 12px;
         }
 
-        .research-card .paper-link {
+        .research-item .paper-link {
             color: var(--accent);
             text-decoration: none;
             font-weight: 500;
-            margin-top: 16px;
+            font-size: 16px;
             display: inline-block;
+            transition: color 0.2s;
         }
 
-        .research-card .paper-link:hover {
+        .research-item .paper-link:hover {
+            color: var(--accent-purple);
             text-decoration: underline;
+        }
+
+        .research-figure {
+            width: 300px;
+            height: 200px;
+            background: var(--border);
+            border-radius: 8px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .research-item {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .research-figure {
+                width: 100%;
+                max-width: 400px;
+            }
         }
 
         /* Hiring Section */
         .hiring {
-            background: var(--primary);
-            color: white;
+            background: var(--bg-light);
+            color: var(--text-dark);
         }
 
-        .hiring .section-title,
-        .hiring .section-subtitle {
-            color: white;
+        .hiring-list {
+            margin-top: 60px;
         }
 
-        .hiring-content {
-            max-width: 900px;
-            margin: 0 auto;
+        .hiring-item {
+            margin-bottom: 80px;
         }
 
-        .hiring-details {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 12px;
-            margin: 40px 0;
-            backdrop-filter: blur(10px);
+        .hiring-item:last-child {
+            margin-bottom: 0;
         }
 
-        .hiring-details h3 {
-            font-size: 24px;
-            margin-bottom: 24px;
+        .hiring-item h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--primary);
         }
 
-        .hiring-details ul {
-            list-style: none;
-            margin-left: 0;
-        }
-
-        .hiring-details li {
+        .hiring-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 17px;
             margin-bottom: 12px;
+        }
+
+        .hiring-item ul {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 17px;
+            margin-bottom: 16px;
             padding-left: 24px;
-            position: relative;
         }
 
-        .hiring-details li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
+        .hiring-item li {
+            margin-bottom: 8px;
+        }
+
+        .hiring-item a {
             color: var(--accent);
-            font-size: 24px;
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        .hiring-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-            margin: 40px 0;
+        .hiring-item a:hover {
+            color: var(--accent-purple);
+            text-decoration: underline;
         }
 
-        .hiring-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 24px;
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-        }
-
-        .hiring-card h4 {
-            font-size: 18px;
-            margin-bottom: 12px;
-        }
-
-        .hiring-card p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 15px;
-        }
 
         /* Team Section */
         .team {
@@ -307,6 +339,19 @@
 
         .team-member {
             text-align: center;
+        }
+
+        .team-member-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--border);
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 12px;
         }
 
         .team-member h3 {
@@ -335,8 +380,19 @@
         .advisor {
             text-align: center;
             padding: 24px;
-            background: var(--bg-light);
-            border-radius: 8px;
+        }
+
+        .advisor-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: var(--border);
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 11px;
         }
 
         .advisor h4 {
@@ -349,28 +405,6 @@
         .advisor p {
             color: var(--text-light);
             font-size: 14px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        footer p {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 16px;
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
 
         /* Responsive */
@@ -394,6 +428,7 @@
             section {
                 padding: 60px 0;
             }
+
         }
 
         /* Smooth scroll */
@@ -407,7 +442,6 @@
         <div class="container">
             <a href="#" class="logo">Aether</a>
             <ul class="nav-links">
-                <li><a href="#mission">Mission</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#hiring">Join Us</a></li>
                 <li><a href="#team">Team</a></li>
@@ -417,48 +451,46 @@
 
     <section class="hero">
         <div class="container">
+            <div class="hero-content">
     <h1>Aether</h1>
-            <p class="tagline">Independent AI Safety Research</p>
-            <div>
-                <a href="#hiring" class="cta-button">We're Hiring</a>
-                <a href="#research" class="cta-button secondary">Our Research</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="mission" class="mission">
-        <div class="container">
-            <div class="mission-content">
-                <h2 class="section-title">Our Mission</h2>
-                <p class="section-subtitle">Advancing the safety of large language model agents through independent research</p>
+                <p class="tagline">LLM Agent Safety Research</p>
                 <p class="mission-text">
                     Aether is an independent LLM agent safety research group dedicated to conducting impactful research that ensures the responsible development and deployment of AI technologies. We work on whatever seems most impactful to us, focusing on critical areas that can positively influence AGI companies, governments, and the broader AI safety field.
                 </p>
+                <div>
+                    <a href="#hiring" class="cta-button">We're Hiring!</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="research" class="research">
         <div class="container">
-            <h2 class="section-title">Research</h2>
-            <p class="section-subtitle">Our work focuses on understanding and improving the safety of LLM agents</p>
+            <h2 class="section-title section-title-only">Research</h2>
             
-            <div class="research-grid">
-                <div class="research-card">
-                    <h3>Chain-of-Thought Monitoring</h3>
-                    <p>Our primary research focus has been on chain-of-thought monitoring. We investigate how information access affects LLM monitors' ability to detect sabotage and other safety-critical behaviors.</p>
-                    <a href="https://drive.google.com/file/d/1DLJfUp86NvORJiQx1NJf0a1MJcVcaL_e/view" target="_blank" rel="noopener noreferrer" class="paper-link">Forthcoming Paper: "How does information access affect LLM monitors' ability to detect sabotage?" →</a>
+            <div class="research-list">
+                <div class="research-item">
+                    <div class="research-content">
+                        <h3>Chain-of-Thought Monitoring & Hidden Reasoning</h3>
+                        <p>Our primary research focus has been on chain-of-thought monitoring. We investigate how information access affects LLM monitors' ability to detect sabotage and other safety-critical behaviors. We've also developed a taxonomy for understanding hidden reasoning processes within LLMs, providing a structured framework for analyzing covert reasoning mechanisms.</p>
+                        <div style="margin-top: 12px; display: flex; gap: 24px; flex-wrap: wrap;">
+                            <a href="https://drive.google.com/file/d/1DLJfUp86NvORJiQx1NJf0a1MJcVcaL_e/view" target="_blank" rel="noopener noreferrer" class="paper-link">Forthcoming Paper: "How does information access affect LLM monitors' ability to detect sabotage?" →</a>
+                            <a href="https://www.lesswrong.com/posts/ZrgFfeWuckpwK5Lyi/hidden-reasoning-in-llms-a-taxonomy" target="_blank" rel="noopener noreferrer" class="paper-link">Read: "Hidden Reasoning in LLMs: A Taxonomy" →</a>
+                        </div>
+                    </div>
+                    <div class="research-figure">
+                        [Figure placeholder]
+                    </div>
                 </div>
                 
-                <div class="research-card">
-                    <h3>Hidden Reasoning in LLMs</h3>
-                    <p>We've developed a taxonomy for understanding hidden reasoning processes within LLMs, providing a structured framework for analyzing covert reasoning mechanisms.</p>
-                    <a href="https://www.lesswrong.com/posts/ZrgFfeWuckpwK5Lyi/hidden-reasoning-in-llms-a-taxonomy" target="_blank" rel="noopener noreferrer" class="paper-link">Read: "Hidden Reasoning in LLMs: A Taxonomy" →</a>
-                </div>
-                
-                <div class="research-card">
-                    <h3>Emerging Research Areas</h3>
-                    <p>We're exploring topics including shaping the generalization of LLM personas, interpretable continual learning, and pretraining data filtering. Our research agenda remains flexible to focus on the most impactful projects.</p>
+                <div class="research-item">
+                    <div class="research-content">
+                        <h3>Emerging Research Areas</h3>
+                        <p>We're exploring topics including shaping the generalization of LLM personas, interpretable continual learning, and pretraining data filtering. Our research agenda remains flexible to focus on the most impactful projects.</p>
+                    </div>
+                    <div class="research-figure">
+                        [Figure placeholder]
+                    </div>
                 </div>
             </div>
         </div>
@@ -466,11 +498,15 @@
 
     <section id="hiring" class="hiring">
         <div class="container">
-            <div class="hiring-content">
-                <h2 class="section-title">We're Hiring</h2>
-                <p class="section-subtitle">Join us in advancing AI safety research</p>
-                
-                <div class="hiring-details">
+            <h2 class="section-title section-title-only">We're Hiring!</h2>
+            
+            <div class="hiring-apply-section">
+                <a href="https://forms.gle/5mg4NZJYspPYrMHU6" target="_blank" rel="noopener noreferrer" class="cta-button">Apply Now</a>
+                <p>Applications reviewed on a rolling basis • Apply early</p>
+            </div>
+
+            <div class="hiring-list">
+                <div class="hiring-item">
                     <h3>Position Details</h3>
                     <ul>
                         <li><strong>Openings:</strong> 1-2 researchers</li>
@@ -482,38 +518,37 @@
                     </ul>
                 </div>
 
-                <div class="hiring-grid">
-                    <div class="hiring-card">
-                        <h4>What You'd Work On</h4>
-                        <p>Empirical and conceptual AI safety research, shaping our research agenda, and contributing to high-impact projects in LLM agent safety.</p>
-                    </div>
-                    
-                    <div class="hiring-card">
-                        <h4>We're Looking For</h4>
-                        <p>Experience with LLMs and empirical ML research, agency, strong motivation about AI safety, and excellent communication skills.</p>
-                    </div>
-                    
-                    <div class="hiring-card">
-                        <h4>Impact You Could Have</h4>
-                        <p>Help us become more established, influence AGI companies and governments, accelerate research velocity, and publish in top conferences.</p>
-                    </div>
+                <div class="hiring-item">
+                    <h3>What you'd be working on</h3>
+                    <p>So far, we have focused on chain-of-thought monitoring. See our <a href="#research">Research</a> section for details on our work, including our forthcoming paper <a href="https://drive.google.com/file/d/1DLJfUp86NvORJiQx1NJf0a1MJcVcaL_e/view" target="_blank" rel="noopener noreferrer">How does information access affect LLM monitors' ability to detect sabotage?</a> and our post <a href="https://www.lesswrong.com/posts/ZrgFfeWuckpwK5Lyi/hidden-reasoning-in-llms-a-taxonomy" target="_blank" rel="noopener noreferrer">Hidden Reasoning in LLMs: A Taxonomy</a>.</p>
+                    <p>We are not committed to a specific research agenda for the upcoming year yet. Topics we're currently exploring include shaping the generalization of LLM personas, interpretable continual learning, and pretraining data filtering. We plan to always work on whatever seems most impactful to us.</p>
                 </div>
 
-                <div style="text-align: center; margin-top: 40px;">
-                    <a href="https://forms.gle/5mg4NZJYspPYrMHU6" target="_blank" rel="noopener noreferrer" class="cta-button" style="background: white; color: var(--primary);">Apply Now</a>
-                    <p style="margin-top: 16px; color: rgba(255, 255, 255, 0.8); font-size: 14px;">
-                        Applications reviewed on a rolling basis • Apply early
-                    </p>
+                <div class="hiring-item">
+                    <h3>We're looking for</h3>
+                    <ul>
+                        <li>Experience working with LLMs and executing empirical ML research projects</li>
+                        <li>Agency and general intelligence</li>
+                        <li>Strong motivation and clear thinking about AI safety</li>
+                        <li>Good written and verbal communication</li>
+                    </ul>
                 </div>
 
-                <div style="margin-top: 40px; padding: 32px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
-                    <h3 style="font-size: 20px; margin-bottom: 16px;">Application Process</h3>
-                    <p style="color: rgba(255, 255, 255, 0.9); line-height: 1.8;">
-                        We generally prefer candidates join us for a short-term collaboration (1-3 months part-time) to establish mutual fit before transitioning to a long-term position. However, if you have AI safety experience equivalent to having completed the MATS extension, we're happy to interview you for a long-term position directly. The interview process includes a coding interview and a conceptual interview discussing your research interests.
-                    </p>
-                    <p style="color: rgba(255, 255, 255, 0.9); margin-top: 16px;">
-                        <a href="https://forms.gle/na6mxmun5D6HX16z6" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: underline;">If you are only interested in short-term collaborations, you can fill out this form instead.</a>
-                    </p>
+                <div class="hiring-item">
+                    <h3>A great hire could help us</h3>
+                    <ul>
+                        <li>Become a more established org, like Apollo or Redwood</li>
+                        <li>Identify and push on relevant levers to positively influence AGI companies, governments, and the AI safety field</li>
+                        <li>Shape a research agenda and focus on more impactful projects</li>
+                        <li>Accelerate our experiment velocity and develop a fast-paced, effective research engineering culture</li>
+                        <li>Publish more papers in top conferences</li>
+                    </ul>
+                </div>
+
+                <div class="hiring-item">
+                    <h3>Application Process</h3>
+                    <p>We generally prefer that candidates join us for a short-term collaboration (1-3 months part-time) to establish mutual fit before transitioning to a long-term position. However, if you have AI safety experience equivalent to having completed the MATS extension, we are happy to interview you for a long-term position directly. The interview process will involve at least two interviews: a coding interview and a conceptual interview where we'll discuss your research interests. The expected starting date for long-term researchers is Feb-May; we're happy to start short-term collaborations as soon as possible.</p>
+                    <p style="margin-top: 12px;">If you are only interested in short-term collaborations, you can fill out <a href="https://forms.gle/na6mxmun5D6HX16z6" target="_blank" rel="noopener noreferrer">this form</a> instead.</p>
                 </div>
             </div>
         </div>
@@ -521,21 +556,23 @@
 
     <section id="team" class="team">
         <div class="container">
-            <h2 class="section-title">Our Team</h2>
-            <p class="section-subtitle">A small group of independent researchers</p>
+            <h2 class="section-title section-title-only">Our Team</h2>
             
             <div class="team-grid">
                 <div class="team-member">
+                    <div class="team-member-avatar">[Photo]</div>
                     <h3>Rohan Subramani</h3>
-                    <p>Co-founder & Researcher</p>
+                    <p>Founder & Researcher</p>
                 </div>
                 <div class="team-member">
+                    <div class="team-member-avatar">[Photo]</div>
                     <h3>Rauno Arike</h3>
-                    <p>Co-founder & Researcher</p>
+                    <p>Researcher</p>
                 </div>
                 <div class="team-member">
+                    <div class="team-member-avatar">[Photo]</div>
                     <h3>Shubhorup Biswas</h3>
-                    <p>Co-founder & Researcher</p>
+                    <p>Researcher</p>
                 </div>
             </div>
 
@@ -543,18 +580,22 @@
                 <h2 class="section-title" style="font-size: 36px;">Advisors</h2>
                 <div class="advisors-grid">
                     <div class="advisor">
+                        <div class="advisor-avatar">[Photo]</div>
                         <h4>Seth Herd</h4>
                         <p>Astera Institute</p>
                     </div>
                     <div class="advisor">
+                        <div class="advisor-avatar">[Photo]</div>
                         <h4>Marius Hobbhahn</h4>
                         <p>Apollo Research</p>
                     </div>
                     <div class="advisor">
+                        <div class="advisor-avatar">[Photo]</div>
                         <h4>Erik Jenner</h4>
                         <p>Google DeepMind</p>
                     </div>
                     <div class="advisor">
+                        <div class="advisor-avatar">[Photo]</div>
                         <h4>Francis Rhys Ward</h4>
                         <p>Independent / LawZero</p>
                     </div>
@@ -562,15 +603,5 @@
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 Aether. Independent AI Safety Research.</p>
-            <p>
-                <a href="https://forum.effectivealtruism.org/posts/ofjdXTLpLmaaoMjeM/aether-july-2025-update" target="_blank" rel="noopener noreferrer">Read our July 2025 Update</a> • 
-                <a href="https://forms.gle/na6mxmun5D6HX16z6" target="_blank" rel="noopener noreferrer">Short-term Collaboration Form</a>
-            </p>
-        </div>
-    </footer>
   </body>
 </html>
