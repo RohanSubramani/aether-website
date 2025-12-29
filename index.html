@@ -435,6 +435,11 @@
             color: var(--text-light);
             font-size: 12px;
             overflow: hidden;
+            transition: opacity 0.2s;
+        }
+
+        .team-member a:hover .team-member-avatar {
+            opacity: 0.8;
         }
 
         .team-member-avatar img {
@@ -449,6 +454,16 @@
             font-weight: 600;
             margin-bottom: 8px;
             color: var(--primary);
+        }
+
+        .team-member h3 a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .team-member h3 a:hover {
+            color: var(--accent);
         }
 
         .team-member p {
@@ -484,6 +499,11 @@
             color: var(--text-light);
             font-size: 11px;
             overflow: hidden;
+            transition: opacity 0.2s;
+        }
+
+        .advisor a:hover .advisor-avatar {
+            opacity: 0.8;
         }
 
         .advisor-avatar img {
@@ -498,6 +518,16 @@
             font-weight: 600;
             margin-bottom: 4px;
             color: var(--primary);
+        }
+
+        .advisor h4 a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .advisor h4 a:hover {
+            color: var(--accent);
         }
 
         .advisor p {
@@ -629,7 +659,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Aether</h1>
+    <h1>Aether</h1>
                 <p class="tagline">LLM Agent Safety Research</p>
                 <p class="mission-text">
                     Aether is an independent LLM agent safety research group dedicated to conducting impactful research that ensures the responsible development and deployment of AI technologies. We work on whatever seems most impactful to us, focusing on critical areas that can positively influence AGI companies, governments, and the broader AI safety field.
@@ -737,24 +767,30 @@
             
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="team-member-avatar">
-                        <img src="images/rohan-subramani.jpeg" alt="Rohan Subramani" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
-                    </div>
-                    <h3>Rohan Subramani</h3>
+                    <a href="https://rohansubramani.github.io/home/" target="_blank" rel="noopener noreferrer">
+                        <div class="team-member-avatar">
+                            <img src="images/rohan-subramani.jpeg" alt="Rohan Subramani" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                        </div>
+                    </a>
+                    <h3><a href="https://rohansubramani.github.io/home/" target="_blank" rel="noopener noreferrer">Rohan Subramani</a></h3>
                     <p>Founder & Researcher</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-member-avatar">
-                        <img src="images/rauno-arike.jpeg" alt="Rauno Arike" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
-                    </div>
-                    <h3>Rauno Arike</h3>
+                    <a href="https://www.lesswrong.com/users/rauno-arike" target="_blank" rel="noopener noreferrer">
+                        <div class="team-member-avatar">
+                            <img src="images/rauno-arike.jpeg" alt="Rauno Arike" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                        </div>
+                    </a>
+                    <h3><a href="https://www.lesswrong.com/users/rauno-arike" target="_blank" rel="noopener noreferrer">Rauno Arike</a></h3>
                     <p>Researcher</p>
                 </div>
                 <div class="team-member">
-                    <div class="team-member-avatar">
-                        <img src="images/shubhorup-biswas.jpg" alt="Shubhorup Biswas" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
-                    </div>
-                    <h3>Shubhorup Biswas</h3>
+                    <a href="https://www.lesswrong.com/users/shubhorup-biswas" target="_blank" rel="noopener noreferrer">
+                        <div class="team-member-avatar">
+                            <img src="images/shubhorup-biswas.jpg" alt="Shubhorup Biswas" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                        </div>
+                    </a>
+                    <h3><a href="https://www.lesswrong.com/users/shubhorup-biswas" target="_blank" rel="noopener noreferrer">Shubhorup Biswas</a></h3>
                     <p>Researcher</p>
                 </div>
             </div>
@@ -763,31 +799,48 @@
                 <h2 class="section-title" style="font-size: 36px;">Advisors</h2>
                 <div class="advisors-grid">
                     <div class="advisor">
-                        <div class="advisor-avatar">
-                            <img src="images/seth-herd.jpg" alt="Seth Herd" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
-                        </div>
-                        <h4>Seth Herd</h4>
+                        <a href="https://www.lesswrong.com/users/seth-herd" target="_blank" rel="noopener noreferrer">
+                            <div class="advisor-avatar">
+                                <img src="images/seth-herd.jpg" alt="Seth Herd" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                            </div>
+                        </a>
+                        <h4><a href="https://www.lesswrong.com/users/seth-herd" target="_blank" rel="noopener noreferrer">Seth Herd</a></h4>
                         <p>Astera Institute</p>
                     </div>
                     <div class="advisor">
-                        <div class="advisor-avatar">
-                            <img src="images/marius-hobbhahn.jpeg" alt="Marius Hobbhahn" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
-                        </div>
-                        <h4>Marius Hobbhahn</h4>
+                        <a href="https://www.mariushobbhahn.com/" target="_blank" rel="noopener noreferrer">
+                            <div class="advisor-avatar">
+                                <img src="images/marius-hobbhahn.jpeg" alt="Marius Hobbhahn" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                            </div>
+                        </a>
+                        <h4><a href="https://www.mariushobbhahn.com/" target="_blank" rel="noopener noreferrer">Marius Hobbhahn</a></h4>
                         <p>Apollo Research</p>
                     </div>
                     <div class="advisor">
-                        <div class="advisor-avatar">
-                            <img src="images/erik-jenner.png" alt="Erik Jenner" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
-                        </div>
-                        <h4>Erik Jenner</h4>
+                        <a href="https://ejenner.com/" target="_blank" rel="noopener noreferrer">
+                            <div class="advisor-avatar">
+                                <img src="images/erik-jenner.png" alt="Erik Jenner" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                            </div>
+                        </a>
+                        <h4><a href="https://ejenner.com/" target="_blank" rel="noopener noreferrer">Erik Jenner</a></h4>
                         <p>Google DeepMind</p>
                     </div>
                     <div class="advisor">
-                        <div class="advisor-avatar">
-                            <img src="images/francis-rhys-ward.webp" alt="Francis Rhys Ward" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
-                        </div>
-                        <h4>Francis Rhys Ward</h4>
+                        <a href="https://www.zhijing-jin.com/" target="_blank" rel="noopener noreferrer">
+                            <div class="advisor-avatar">
+                                <img src="images/zhijing-jin.webp" alt="Zhijing Jin" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                            </div>
+                        </a>
+                        <h4><a href="https://www.zhijing-jin.com/" target="_blank" rel="noopener noreferrer">Zhijing Jin</a></h4>
+                        <p>University of Toronto</p>
+                    </div>
+                    <div class="advisor">
+                        <a href="https://francisrhysward.wordpress.com/" target="_blank" rel="noopener noreferrer">
+                            <div class="advisor-avatar">
+                                <img src="images/francis-rhys-ward.webp" alt="Francis Rhys Ward" onerror="this.style.display='none'; this.parentElement.innerHTML='[Photo]';">
+                            </div>
+                        </a>
+                        <h4><a href="https://francisrhysward.wordpress.com/" target="_blank" rel="noopener noreferrer">Francis Rhys Ward</a></h4>
                         <p>Independent / LawZero</p>
                     </div>
                 </div>
