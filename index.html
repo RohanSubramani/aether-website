@@ -185,6 +185,11 @@
         .hero-cta {
             text-align: center;
             margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
         }
 
         .cta-button {
@@ -553,6 +558,16 @@
                 font-size: 16px;
             }
 
+            .hero-cta {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-cta .cta-button {
+                width: 100%;
+                max-width: 280px;
+            }
+
             .section-title {
                 font-size: 36px;
             }
@@ -667,7 +682,7 @@
             </div>
             <div class="hero-cta">
                 <a href="#hiring" class="cta-button">We're Hiring!</a>
-                <a href="https://discord.gg/5WjVBtgAhB" target="_blank" rel="noopener noreferrer" class="cta-button" style="margin-left: 16px;">Join our Discord</a>
+                <a href="https://discord.gg/5WjVBtgAhB" target="_blank" rel="noopener noreferrer" class="cta-button">Join our Discord</a>
             </div>
         </div>
     </section>
