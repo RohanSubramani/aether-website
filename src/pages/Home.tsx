@@ -39,6 +39,39 @@ const TEAM_MEMBERS = [
   },
 ]
 
+const SPAR_PROJECTS = [
+  {
+    title: 'Predicting How LLMs Generalize',
+    mentors: 'Vladimir Ivanov & Joey Yudelson',
+    url: 'https://sparai.org/projects/f26/recRAC7j6XvVBAxE6/',
+  },
+  {
+    title: 'Value Drift Under Recursive Training Loops',
+    mentors: 'Lionel Levine & Rauno Arike',
+    url: 'https://sparai.org/projects/f26/recqk5MPTMvdOZq4J/',
+  },
+  {
+    title: 'Investigating Model Internal Verbalizers',
+    mentors: 'Dennis Akar',
+    url: 'https://sparai.org/projects/f26/recoAPLiJxUEG45bY/',
+  },
+  {
+    title: 'Orthogonalization Against Reward Hacking',
+    mentors: 'Vladimir Ivanov',
+    url: 'https://sparai.org/projects/f26/rec6s8CRgbmKsDlZ1/',
+  },
+  {
+    title: 'Scalable Midtraining',
+    mentors: 'Shubhorup Biswas',
+    url: 'https://sparai.org/projects/f26/recoY7vmPkGJs3GUD/',
+  },
+  {
+    title: 'Evaluating Debate Protocols in Auditing Sabotage Bench',
+    mentors: 'Joey Yudelson',
+    url: 'https://sparai.org/projects/f26/reckpAVzHS3prQp02/',
+  },
+]
+
 const ADVISORS = [
   {
     name: 'Rohan Subramani',
@@ -312,10 +345,38 @@ export default function Home() {
 
           <div className="get-involved-content" style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
             <p style={{ fontSize: 17, color: 'var(--text-light)', lineHeight: 1.7 }}>
-              We are not accepting applications right now, but people who are interested in
-              positions can view details about our last hiring round{' '}
-              <a href="/past-hiring">here</a>.
+              We are not hiring for full-time roles right now, but you can view details
+              about our last hiring round <a href="/past-hiring">here</a>.
             </p>
+          </div>
+
+          <div className="spar-section">
+            <h3 className="spar-title">SPAR Projects</h3>
+            <p className="spar-intro">
+              Our team members are mentoring the following projects in the Fall 2026 round
+              of the{' '}
+              <a href="https://sparai.org/" target="_blank" rel="noopener noreferrer">
+                Supervised Program for Alignment Research (SPAR)
+              </a>
+              .
+            </p>
+            <div className="spar-grid">
+              {SPAR_PROJECTS.map(({ title, mentors, url }) => (
+                <a
+                  key={url}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="spar-card"
+                >
+                  <span className="spar-card-title">{title}</span>
+                  <span className="spar-card-mentors">Mentored by {mentors}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="get-involved-content" style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
             <div className="hero-cta" style={{ marginTop: 24 }}>
               <a
                 href="https://discord.gg/5WjVBtgAhB"
