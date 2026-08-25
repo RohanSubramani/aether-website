@@ -39,39 +39,6 @@ const TEAM_MEMBERS = [
   },
 ]
 
-const SPAR_PROJECTS = [
-  {
-    title: 'Predicting How LLMs Generalize',
-    mentors: 'Vladimir Ivanov & Joey Yudelson',
-    url: 'https://sparai.org/projects/f26/recRAC7j6XvVBAxE6/',
-  },
-  {
-    title: 'Value Drift Under Recursive Training Loops',
-    mentors: 'Lionel Levine & Rauno Arike',
-    url: 'https://sparai.org/projects/f26/recqk5MPTMvdOZq4J/',
-  },
-  {
-    title: 'Investigating Model Internal Verbalizers',
-    mentors: 'Dennis Akar',
-    url: 'https://sparai.org/projects/f26/recoAPLiJxUEG45bY/',
-  },
-  {
-    title: 'Orthogonalization Against Reward Hacking',
-    mentors: 'Vladimir Ivanov',
-    url: 'https://sparai.org/projects/f26/rec6s8CRgbmKsDlZ1/',
-  },
-  {
-    title: 'Scalable Midtraining',
-    mentors: 'Shubhorup Biswas',
-    url: 'https://sparai.org/projects/f26/recoY7vmPkGJs3GUD/',
-  },
-  {
-    title: 'Evaluating Debate Protocols in Auditing Sabotage Bench',
-    mentors: 'Joey Yudelson',
-    url: 'https://sparai.org/projects/f26/reckpAVzHS3prQp02/',
-  },
-]
-
 const ADVISORS = [
   {
     name: 'Rohan Subramani',
@@ -86,18 +53,6 @@ const ADVISORS = [
     url: 'https://www.lesswrong.com/users/seth-herd',
   },
   {
-    name: 'Marius Hobbhahn',
-    org: 'Apollo Research',
-    img: '/images/marius-hobbhahn.jpeg',
-    url: 'https://www.mariushobbhahn.com/',
-  },
-  {
-    name: 'Erik Jenner',
-    org: 'Google DeepMind',
-    img: '/images/erik-jenner.png',
-    url: 'https://ejenner.com/',
-  },
-  {
     name: 'Zhijing Jin',
     org: 'University of Toronto',
     img: '/images/zhijing-jin.webp',
@@ -105,7 +60,7 @@ const ADVISORS = [
   },
   {
     name: 'Francis Rhys Ward',
-    org: 'Independent',
+    org: 'Arrow Research',
     img: '/images/francis-rhys-ward.webp',
     url: 'https://francisrhysward.wordpress.com/',
   },
@@ -234,7 +189,7 @@ export default function Home() {
               <div className="research-content">
                 <h3>Understanding and Shaping LLM Propensities</h3>
                 <p>
-                  We have also explored topics related to LLM propensities, including character training, model organisms of misalignment, and pretraining data filtering.
+                  We have also explored topics related to LLM propensities, including character training, generalization science, and model organisms of misalignment.
                 </p>
 
                 <div className="pub-group">
@@ -247,19 +202,10 @@ export default function Home() {
                       <span className="pub-authors">Rauno Arike</span>
                     </li>
                     <li>
-                      Can language models preserve their own alignment?{' '}
-                      <span className="forthcoming">(forthcoming)</span>
-                      <span className="pub-authors">Rauno Arike</span>
-                    </li>
-                    <li>
-                      Model Organisms of Sandbagging in the Wild?{' '}
-                      <span className="forthcoming">(forthcoming)</span>
+                      <a href="https://www.lesswrong.com/posts/pEZ6ChmGLf3FF5z9y/model-organisms-of-sandbagging-in-the-wild" target="_blank" rel="noopener noreferrer">
+                        Model Organisms of Sandbagging in the Wild?
+                      </a>
                       <span className="pub-authors">Vladimir Ivanov</span>
-                    </li>
-                    <li>
-                      Tentative Recommendations for Pretraining Data Filtering{' '}
-                      <span className="forthcoming">(forthcoming)</span>
-                      <span className="pub-authors">Rauno Arike, Lev McKinney</span>
                     </li>
                   </ul>
                 </div>
@@ -348,35 +294,6 @@ export default function Home() {
               We are not hiring for full-time roles right now, but you can view details
               about our last hiring round <a href="/past-hiring">here</a>.
             </p>
-          </div>
-
-          <div className="spar-section">
-            <h3 className="spar-title">SPAR Projects</h3>
-            <p className="spar-intro">
-              Our team members are mentoring the following projects in the Fall 2026 round
-              of the{' '}
-              <a href="https://sparai.org/" target="_blank" rel="noopener noreferrer">
-                Supervised Program for Alignment Research (SPAR)
-              </a>
-              .
-            </p>
-            <div className="spar-grid">
-              {SPAR_PROJECTS.map(({ title, mentors, url }) => (
-                <a
-                  key={url}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="spar-card"
-                >
-                  <span className="spar-card-title">{title}</span>
-                  <span className="spar-card-mentors">Mentored by {mentors}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div className="get-involved-content" style={{ maxWidth: 600, margin: '0 auto', textAlign: 'center' }}>
             <div className="hero-cta" style={{ marginTop: 24 }}>
               <a
                 href="https://discord.gg/5WjVBtgAhB"
